@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopPro - E-Commerce PWA</title>
+  <meta name="description" content="Progressive Web App for E-Commerce with offline support">
+  <meta name="theme-color" content="#317EFB">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">ShopPro</div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search products...">
+      </div>
+      <div class="icons">
+        <div class="wishlist-icon">❤️<span class="wishlist-count" id="wishlistCount">0</span></div>
+        <div class="cart-icon" id="cartIcon">🛒<span class="cart-count" id="cartCount">0</span></div>
+        <div class="user-icon" id="userIcon">👤</div>
+        <div class="theme-toggle" id="themeToggle">🌙</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Featured Products</h1>
+    <div class="filters">
+      <select id="categoryFilter"><option value="all">All Categories</option></select>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+
+  <div class="offline-indicator" id="offlineIndicator">You are currently offline</div>
+
+  <!-- Cart Modal -->
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeCart">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <span id="cartTotal"></span>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div class="modal" id="wishlistModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeWishlist">&times;</span>
+      <h2>Your Wishlist</h2>
+      <div id="wishlistItems"></div>
+    </div>
+  </div>
+
+  <!-- User Modal -->
+  <div class="modal" id="userModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeUser">&times;</span>
+      <h2>Login / Signup</h2>
+      <form class="auth-form">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button class="btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
